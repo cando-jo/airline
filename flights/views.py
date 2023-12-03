@@ -9,10 +9,9 @@ def index(request):
     })
 
 
-def add_flight(request):
-    if request.method == "POST":
-        origin = request.POST.get("added_flight_origin")
-        destination = request.POST.get("added_flight_destination")
-        duration = request.POST.get("added_flight_duration")
-        f = Flight(origin, destination, duration)
+def flight(request, flight_id):
+    flight = Flight.objects.get(pk=flight_id)
+    return render(request, 'flights/flight.html', {
+        'flight': flight
+    })
         
