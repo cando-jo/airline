@@ -1,0 +1,41 @@
+python3 manage.py makemigrations
+- After adding a class, we have to make a migration
+
+python3 manage.py migrate
+- To apply all migrations (Push gibi)
+
+python3 manage.py shell
+- Runs the django shell
+
+shell commands:
+creating an object
+- f = Flight(origin="<origin>", destination="<destination>", duration=<id>)
+- f.save() 
+
+showing current objects in a table
+- <model/table name>.objects.all()
+
+we can declare a variable which stores a particular flight or all flights:
+- flights = Flight.objects.all()
+- flight = flights.first() #Stores first flight that was created
+- flight.id #Gives us the id, same fore flight.origin or flight.destination
+- flight.delete() #Delete the flight from the database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is a migration?
+- Apply the changes we make to the models and add these changes to the database.
+
+
