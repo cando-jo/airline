@@ -8,5 +8,15 @@
 <body>
     <h1> Flight number {{flight.id}} </h1>
     <h2>From {{flight.origin}} to {{flight.destination}}</h2>
+    <h2>Passengers on this flight:</h2>
+    <ul>
+        {%for passenger in passengers%}
+        <li>{{passenger.first}} {{passenger.last}}</li>
+        {% empty %}
+        <li>No Passengers</li>
+        {%endfor%}
+    </ul>
+    <a href="{% url 'index' %}">Back to flights list</a>
+
 </body>
 </html>

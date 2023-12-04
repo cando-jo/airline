@@ -9,7 +9,8 @@
     <h1>All Flights</h1>
     <ul>
         {% for flight in all_flights %}
-        <li>Flight {{flight.id}}: From {{flight.origin}} to {{flight.destination}}</li>
+        
+        <li>Flight <a href="{% url 'flight' flight.id %}"> {{flight.id}}</a>: From {{flight.origin}} to {{flight.destination}} ({{flight.passengers.all.count}} passengers)</li>
         {% endfor %}
     </ul>
 </body>

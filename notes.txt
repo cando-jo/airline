@@ -23,7 +23,8 @@ we can declare a variable which stores a particular flight or all flights:
 
 
 
-
+adminship
+- python3 manage.py createsuperuser
 
 
 
